@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgDesktop from '../../assets/images/bg-home-desktop.jpg';
+import bgDesktop from '../../assets/images/bg-home-desktop-3.jpg';
 import bgMobile from '../../assets/images/bg-home-mobile.jpg';
 import ff7cursor from '../../assets/icons/FF7Cursor.png';
 

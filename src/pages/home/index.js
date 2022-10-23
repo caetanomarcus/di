@@ -24,25 +24,13 @@ const Home = () => {
     ]
 
     const handleClick = (id) => {
-        if(window.innerWidth >=768){
             if(!isDisabled){
                 setActiveItem(id)
-                setTimeout(()=> {
-                    alert("deu bom")
-                    setDisabled(true)
-                }, 700)
+                // setTimeout(()=> {
+                //     alert("deu bom")
+                //     setDisabled(true)
+                // }, 700)
             }
-        } else {
-            if(!isDisabled){
-                setTimeout(()=> {
-                    alert("deu bom")
-                    setDisabled(true)
-                }, 700)
-            }
-        }
-        
-
-       
     }
 
     return (<S.Wrapper>
@@ -50,11 +38,11 @@ const Home = () => {
             <S.Title1>Diogo</S.Title1>
         </S.TitleBox>
         <S.MenuBox>
-            <S.Menu>
+            <S.Menu role="button">
                 {menu.map(item => <S.MenuItem  
                 key={item.id} 
                 onClick={() => handleClick(item.id)} 
-                isActive={item.id === activeItem} 
+                isActive={(window.innerWidth >=768) &&  item.id === activeItem} 
                 >
                 {item.name}
                 </S.MenuItem>
