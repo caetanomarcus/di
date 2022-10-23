@@ -3,7 +3,7 @@ import * as S from './styles'
 
 const Home = () => {
     const [activeItem, setActiveItem] = useState(null);
-    const [isDisabled, setDisabled] = useState(false);
+    const [isDisabled] = useState(false);
     const menu = [
         {
             name: 'Portfólio',
